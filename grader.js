@@ -70,7 +70,7 @@ if(require.main == module) {
 		.parse(process.argv);
 	var checkJson;
 	if(program.url){
-		var cheerioObjects = cheerio.load(rest.get(program.url).on('complete',fuction(result)));
+		var cheerioObjects = cheerio.load(rest.get(program.url).on('complete',fuction()));
 		checkJson = checkHtmlFile(cheerioObjects, program.checks);
 	} else {	
     var htmlFile = cheerioHtmlFile(program.file);
